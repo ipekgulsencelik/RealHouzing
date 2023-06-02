@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RealHouzing.DataAccessLayer\RealHouzing.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\RealHouzing.EntityLayer\RealHouzing.EntityLayer.csproj" />
+  </ItemGroup>
+
 </Project>
