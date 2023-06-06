@@ -28,6 +28,11 @@ namespace RealHouzing.BusinessLayer.Concrete
             return _productDAL.GetList();
         }
 
+        public List<Product> TGetProductsWithCategories()
+        {
+            return _productDAL.GetProductsWithCategories();
+        }
+
         public void TInsert(Product entity)
         {
             _productDAL.Insert(entity);

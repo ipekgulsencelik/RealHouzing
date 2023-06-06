@@ -3,6 +3,7 @@ using RealHouzing.BusinessLayer.Concrete;
 using RealHouzing.DataAccessLayer.Abstract;
 using RealHouzing.DataAccessLayer.Concrete;
 using RealHouzing.DataAccessLayer.EntityFramework;
+using System.Text.Json.Serialization;
 
 namespace RealHouzing.API
 {
@@ -22,7 +23,8 @@ namespace RealHouzing.API
             builder.Services.AddScoped<IProductDAL, EFProductDAL>();
             builder.Services.AddScoped<IProductService, ProductManager>();
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
