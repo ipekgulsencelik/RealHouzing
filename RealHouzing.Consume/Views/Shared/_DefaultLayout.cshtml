@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "_DefaultLayout";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+@await Component.InvokeAsync("_BreadcrumbPartial")
+
+<div>
+    @RenderBody()
+</div>
+
