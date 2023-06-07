@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<body>
+    
+    @await Component.InvokeAsync("_SliderPartial")
+
+    @await Component.InvokeAsync("_OptionPartial")  
+
+    @await Component.InvokeAsync("_BannerPartial")
+
+    @await Component.InvokeAsync("_VideoPopupPartial")
+    
+    @await Component.InvokeAsync("_PostPropertyPartial")
+
+    @await Component.InvokeAsync("_FeaturePartial")
+
+    @await Component.InvokeAsync("_PropertyPartial")
+
+    @await Component.InvokeAsync("_JoinPartial")
+
+    @await Component.InvokeAsync("_TestimonialPartial") 
+    
+    @await Component.InvokeAsync("_BlogPartial")      
+    
+</body>
+
+</html>
