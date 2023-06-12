@@ -12,10 +12,48 @@ Author URL: http://w3layouts.com
 <html lang="en">
 
 <body>
+    <!-- contacts-5-grid -->
+    <div class="w3l-contact-10 py-5" id="contact">
+        <div class="form-41-mian pt-lg-4 pt-md-3 pb-lg-4">
+            <div class="container">
+                <div class="heading text-center mx-auto">
+                    <h5 class="title-subw3hny text-center">Contact our team</h5>
+                    <h3 class="title-w3l">Got any <span class="inn-text">Questions? </span></h3>
+                </div>
 
-    @await Component.InvokeAsync("_ContactPartial")
+                @await Component.InvokeAsync("_ContactInformationPartial")
 
-    @await Component.InvokeAsync("_SubContactPartial")
+                @await Component.InvokeAsync("_ContactPartial")
+
+                @*@await Component.InvokeAsync("_MapPartial")*@
+                <div class="form-inner-cont mt-5">
+                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                        <div class="form-grids">
+                            <div class="form-input">
+                                <input type="text" name="w3lName" id="w3lName" placeholder="Enter your name *" required="" />
+                            </div>
+                            <div class="form-input">
+                                <input type="text" name="w3lSubject" id="w3lSubject" placeholder="Enter subject " required />
+                            </div>
+                            <div class="form-input">
+                                <input type="email" name="w3lSender" id="w3lSender" placeholder="Enter your email *" required />
+                            </div>
+                            <div class="form-input">
+                                <input type="text" name="w3lPhone" id="w3lPhone" placeholder="Enter your Phone Number *" required />
+                            </div>
+                        </div>
+                        <div class="form-input">
+                            <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your query here" required=""></textarea>
+                        </div>
+                        <div class="w3-submit text-right">
+                            <button class="btn btn-style btn-primary">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //contacts-5-grid -->
 
 </body>
 

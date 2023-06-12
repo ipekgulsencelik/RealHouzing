@@ -26,6 +26,15 @@ namespace RealHouzing.API
             builder.Services.AddScoped<IOptionDAL, EFOptionDAL>();
             builder.Services.AddScoped<IOptionService, OptionManager>();
 
+            builder.Services.AddScoped<IContactDAL, EFContactDAL>();
+            builder.Services.AddScoped<IContactService, ContactManager>();
+
+            builder.Services.AddScoped<IContactInformationDAL, EFContactInformationDAL>();
+            builder.Services.AddScoped<IContactInformationService, ContactInformationManager>();
+
+            builder.Services.AddScoped<IMapDAL, EFMapDAL>();
+            builder.Services.AddScoped<IMapDAL, EFMapDAL>();
+
             builder.Services.AddControllersWithViews()
     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

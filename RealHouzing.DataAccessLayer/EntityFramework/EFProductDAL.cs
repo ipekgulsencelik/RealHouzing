@@ -2,7 +2,7 @@
 using RealHouzing.DataAccessLayer.Abstract;
 using RealHouzing.DataAccessLayer.Concrete;
 using RealHouzing.DataAccessLayer.Repository;
-using RealHouzing.EntityLayer;
+using RealHouzing.EntityLayer.Concrete;
 
 namespace RealHouzing.DataAccessLayer.EntityFramework
 {

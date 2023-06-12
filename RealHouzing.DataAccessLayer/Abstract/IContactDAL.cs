@@ -2,8 +2,7 @@
 
 namespace RealHouzing.DataAccessLayer.Abstract
 {
-    public interface IProductDAL : IGenericDAL<Product>
+    public interface IContactDAL : IGenericDAL<Contact>
     {
-        List<Product> GetProductsWithCategories();
     }
 }

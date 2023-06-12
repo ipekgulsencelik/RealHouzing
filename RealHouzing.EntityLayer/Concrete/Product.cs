@@ -1,6 +1,4 @@
-﻿using RealHouzing.EntityLayer.Concrete;
-
-namespace RealHouzing.EntityLayer
+﻿namespace RealHouzing.EntityLayer.Concrete
 {
     public class Product
     {

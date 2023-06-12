@@ -1,6 +1,6 @@
 ﻿using RealHouzing.BusinessLayer.Abstract;
 using RealHouzing.DataAccessLayer.Abstract;
-using RealHouzing.EntityLayer;
+using RealHouzing.EntityLayer.Concrete;
 
 namespace RealHouzing.BusinessLayer.Concrete
 {

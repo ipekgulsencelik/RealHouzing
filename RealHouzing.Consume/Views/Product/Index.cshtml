@@ -1,0 +1,45 @@
+﻿@model List<ProductListViewModel>
+
+@{
+    Layout = null;
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.ProductTitle</td>
+                <td>@item.ProductPrice ₺</td>
+                <td>@item.ProductType</td>
+                <td>@item.CategoryID</td>
+                <td><a href="/Product/DeleteProduct/@item.ProductID" class="btn btn-danger">Delete</a></td>
+                <td>
+                    <a href="/Product/UpdateProduct/@item.ProductID" class="btn btn-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Update
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/Product/AddProduct" class="btn btn-primary">Add New Product</a>
+</div>

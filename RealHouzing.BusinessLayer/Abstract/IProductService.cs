@@ -1,4 +1,4 @@
-﻿using RealHouzing.EntityLayer;
+﻿using RealHouzing.EntityLayer.Concrete;
 
 namespace RealHouzing.BusinessLayer.Abstract
 {

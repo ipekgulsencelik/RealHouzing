@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RealHouzing.BusinessLayer.Abstract;
 using RealHouzing.DTOLayer.ProductDTOs;
-using RealHouzing.EntityLayer;
+using RealHouzing.EntityLayer.Concrete;
 
 namespace RealHouzing.API.Controllers
 {
@@ -49,7 +49,7 @@ namespace RealHouzing.API.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
             var value = _productService.TGetByID(id);
@@ -57,7 +57,7 @@ namespace RealHouzing.API.Controllers
             return Ok();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
             var values = _productService.TGetByID(id);
