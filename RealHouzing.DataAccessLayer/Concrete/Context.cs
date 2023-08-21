@@ -1,14 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using RealHouzing.EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RealHouzing.DataAccessLayer.Concrete
 {
-    public class Context : DbContext
+    public class Context : IdentityDbContext<AppUser, AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -21,5 +17,14 @@ namespace RealHouzing.DataAccessLayer.Concrete
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<ContactInformation> ContactInformation { get; set; }
         public DbSet<Map> Maps { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<BuyLease> BuyLeases { get; set; }
+        public DbSet<PostProperty> PostProperties { get; set; }
+        public DbSet<Video> Videos { get; set; }
     }
 }

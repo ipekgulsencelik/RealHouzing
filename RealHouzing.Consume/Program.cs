@@ -1,3 +1,7 @@
+using RealHouzing.Consume.Models;
+using RealHouzing.DataAccessLayer.Concrete;
+using RealHouzing.EntityLayer.Concrete;
+
 namespace RealHouzing.Consume
 {
     public class Program
@@ -8,6 +12,9 @@ namespace RealHouzing.Consume
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<Context>();
+            builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>(); 
 
             builder.Services.AddHttpClient();
 

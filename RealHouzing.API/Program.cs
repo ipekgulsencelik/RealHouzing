@@ -3,6 +3,7 @@ using RealHouzing.BusinessLayer.Concrete;
 using RealHouzing.DataAccessLayer.Abstract;
 using RealHouzing.DataAccessLayer.Concrete;
 using RealHouzing.DataAccessLayer.EntityFramework;
+using RealHouzing.EntityLayer.Concrete;
 using System.Text.Json.Serialization;
 
 namespace RealHouzing.API
@@ -15,6 +16,8 @@ namespace RealHouzing.API
 
             // Add services to the container.
 
+            builder.Services.AddControllersWithViews();
+            
             builder.Services.AddDbContext<Context>();
 
             builder.Services.AddScoped<ICategoryDAL, EFCategoryDAL>();
