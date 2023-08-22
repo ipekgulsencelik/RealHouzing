@@ -2,7 +2,7 @@
 
 namespace RealHouzing.BusinessLayer.Abstract
 {
-    internal interface IVideoService : IGenericService<Video>
+    public interface IVideoService : IGenericService<Video>
     {
     }
 }
