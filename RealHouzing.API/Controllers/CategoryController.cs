@@ -39,6 +39,7 @@ namespace RealHouzing.API.Controllers
                 CategoryName = resultCategoryDTO.CategoryName
             };
             _categoryService.TInsert(category);
+
             return Ok();
         }
 
@@ -51,6 +52,7 @@ namespace RealHouzing.API.Controllers
                 CategoryName = updateCategoryDTO.CategoryName
             };
             _categoryService.TUpdate(category);
+            
             return Ok();
         }
 

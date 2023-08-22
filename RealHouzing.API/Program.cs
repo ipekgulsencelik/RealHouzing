@@ -3,7 +3,6 @@ using RealHouzing.BusinessLayer.Concrete;
 using RealHouzing.DataAccessLayer.Abstract;
 using RealHouzing.DataAccessLayer.Concrete;
 using RealHouzing.DataAccessLayer.EntityFramework;
-using RealHouzing.EntityLayer.Concrete;
 using System.Text.Json.Serialization;
 
 namespace RealHouzing.API
@@ -36,7 +35,31 @@ namespace RealHouzing.API
             builder.Services.AddScoped<IContactInformationService, ContactInformationManager>();
 
             builder.Services.AddScoped<IMapDAL, EFMapDAL>();
-            builder.Services.AddScoped<IMapDAL, EFMapDAL>();
+            builder.Services.AddScoped<IMapService, MapManager>();
+
+            builder.Services.AddScoped<IAboutDAL, EFAboutDAL>();
+            builder.Services.AddScoped<IAboutService, AboutManager>();
+
+            builder.Services.AddScoped<IBlogDAL, EFBlogDAL>();
+            builder.Services.AddScoped<IBlogService, BlogManager>();
+
+            builder.Services.AddScoped<IBuyLeaseDAL, EFBuyLeaseDAL>();
+            builder.Services.AddScoped<IBuyLeaseService, BuyLeaseManager>();
+
+            builder.Services.AddScoped<IServiceDAL, EFServiceDAL>();
+            builder.Services.AddScoped<IServiceService, ServiceManager>();
+
+            builder.Services.AddScoped<ISubscribeDAL, EFSubscribeDAL>();
+            builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
+
+            builder.Services.AddScoped<ITeamDAL, EFTeamDAL>();
+            builder.Services.AddScoped<ITeamService, TeamManager>();
+
+            builder.Services.AddScoped<ITestimonialDAL, EFTestimonialDAL>();
+            builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+
+            builder.Services.AddScoped<IVideoDAL, EFVideoDAL>();
+            builder.Services.AddScoped<IVideoService, VideoManager>();
 
             builder.Services.AddControllersWithViews()
     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
@@ -56,7 +79,6 @@ namespace RealHouzing.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
