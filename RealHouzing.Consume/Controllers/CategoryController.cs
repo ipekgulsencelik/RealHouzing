@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RealHouzing.Consume.Models;
+using RealHouzing.Consume.Models.CategoryViewModels;
 using System.Text;
 
 namespace RealHouzing.Consume.Controllers

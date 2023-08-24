@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RealHouzing.Consume.Models;
+using RealHouzing.Consume.Models.OptionViewModels;
 
 namespace RealHouzing.Consume.ViewComponents.Default
 {
@@ -20,7 +20,7 @@ namespace RealHouzing.Consume.ViewComponents.Default
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<OptionViewModel>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<OptionListViewModel>>(jsonData);
                 return View(values);
             }
 

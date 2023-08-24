@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RealHouzing.Consume.Models;
+using RealHouzing.Consume.Models.ContactViewModels;
 
 namespace RealHouzing.Consume.ViewComponents.Contact
 {
@@ -20,7 +20,7 @@ namespace RealHouzing.Consume.ViewComponents.Contact
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ContactInformationViewModel>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ContactListViewModel>>(jsonData);
 
                 return View(values);
             }

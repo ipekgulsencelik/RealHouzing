@@ -1,0 +1,41 @@
+﻿﻿﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Views/Dashboard/_HeadPartial.cshtml")
+
+<body class="hold-transition sidebar-mini">
+
+    <div class="wrapper">
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+           
+            @await Html.PartialAsync("/Views/Dashboard/_BrandLogoPartial.cshtml")
+
+            @await Html.PartialAsync("/Views/Dashboard/_SidebarPartial.cshtml")
+
+        </aside>
+
+        <div class="content-wrapper">
+
+            @RenderBody()
+
+        </div>
+        
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        
+        @await Html.PartialAsync("/Views/Dashboard/_FooterPartial.cshtml")
+
+    </div>
+
+    @await Html.PartialAsync("/Views/Dashboard/_ScriptPartial.cshtml")
+
+</body>
+</html>

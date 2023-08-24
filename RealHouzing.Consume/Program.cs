@@ -29,9 +29,12 @@ namespace RealHouzing.Consume
             }
 
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -40,6 +43,8 @@ namespace RealHouzing.Consume
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
+
+            app.UseStaticFiles();
         }
     }
 }
