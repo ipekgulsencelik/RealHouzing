@@ -21,6 +21,7 @@ namespace RealHouzing.Consume.ViewComponents.Default
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<OptionListViewModel>>(jsonData);
+
                 return View(values);
             }
 

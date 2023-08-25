@@ -1,0 +1,56 @@
+﻿﻿@using RealHouzing.Consume.Models.MapViewModels;
+@model List<MapListViewModel>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<h3 class="container">Lokasyon</h3>
+<br />
+<br />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Map Embed</th>
+            <th>Durum</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td><a href="@item.MapLocation" class="btn btn-secondary">Lokasyon</a></td>
+                <td>
+                    @if (item.Status)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-times-circle"></i>
+                    }
+                </td>
+                <td>
+                    <a href="/Map/DeleteMap/@item.MapID" target="_blank" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+                <td>
+                    <a href="/Map/UpdateMap/@item.MapID" class="btn btn-outline-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/Map/AddMap" class="btn btn-outline-info">Yeni Lokasyon Girişi</a>
+</div>

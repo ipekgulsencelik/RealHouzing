@@ -11,6 +11,7 @@
         public int BathCount { get; set; }
         public int Square { get; set; }
         public string CoverImageURL { get; set; }
+        public string CategoryName { get; set; }
 
         public int CategoryID { get; set; }
     }

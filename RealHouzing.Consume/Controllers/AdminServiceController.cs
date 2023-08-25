@@ -22,8 +22,8 @@ namespace RealHouzing.Consume.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<ServiceListViewModel>>(jsonData);
-                return View(values);
 
+                return View(values);
             }
 
             return View();

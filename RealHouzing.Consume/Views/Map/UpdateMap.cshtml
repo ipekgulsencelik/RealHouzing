@@ -1,0 +1,22 @@
+﻿﻿@using RealHouzing.Consume.Models.MapViewModels;
+@model UpdateMapViewModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1 class="container">Lokasyon Güncelleme Sayfası</h1>
+<br />
+<form method="post" class="container">
+    @Html.HiddenFor(x=>x.MapID)
+    <label>Lokasyon Embed Link</label>
+    <input type="text" asp-for="MapLocation" class="form-control" />
+    <br />
+    <div class="custom-control custom-checkbox">
+        <input asp-for="Status" type="checkbox" class="custom-control-input">
+        <label class="custom-control-label">Durum</label>
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>

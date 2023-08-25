@@ -2,7 +2,7 @@
 
 namespace RealHouzing.Consume.ViewComponents.About
 {
-    public class _RentPartial : ViewComponent
+    public class _CoLivingPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

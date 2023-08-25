@@ -13,13 +13,15 @@ Author URL: http://w3layouts.com
 
 <body>
     
-    @await Component.InvokeAsync("_AboutUsPartial")
+    @await Component.InvokeAsync("_AboutBannerPartial")
 
-    @await Component.InvokeAsync("_RentPartial")
+    @await Component.InvokeAsync("_ServicePartial")
+
+    @await Component.InvokeAsync("_CoLivingPartial")
 
     @await Component.InvokeAsync("_ProgressPartial")
 
-    @await Component.InvokeAsync("_FrequentlyAskedQuestionPartial")
+    @await Component.InvokeAsync("_FrequentlyAskedQuestionPartial")    
 
     @await Component.InvokeAsync("_StatPartial")    
     

@@ -1,4 +1,7 @@
-﻿<!--/team-sec-->
+﻿﻿@using RealHouzing.Consume.Models.TeamViewModels;
+@model List<TeamListViewModel>
+
+<!--/team-sec-->
 <section class="w3l-team-main team py-5" id="team">
     <div class="container py-lg-5">
         <div class="title-content text-center mb-2">
@@ -6,82 +9,33 @@
             <h3 class="title-w3l">Who Worked With Us.</h3>
         </div>
         <div class="row team-row justify-content-center">
-            <div class="col-lg-4 col-6 team-wrap mt-lg-5 mt-4">
-                <div class="team-member text-center">
-                    <div class="team-img">
-                        <img src="~/RealHouzing-Starter/assets/images/team1.jpg" alt="" class="radius-image">
-                        <div class="overlay-team">
-                            <div class="team-details text-center">
-                                <div class="socials mt-20">
-                                    <a href="#url">
-                                        <span class="fab fa-facebook-f"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fab fa-twitter"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fab fa-linkedin-in"></span>
-                                    </a>
+            @foreach(var item in Model)
+            {
+                <div class="col-lg-4 col-6 team-wrap mt-lg-5 mt-4">
+                    <div class="team-member text-center">
+                        <div class="team-img">
+                            <img src="@item.ImageURL" alt="" class="radius-image">
+                            <div class="overlay-team">
+                                <div class="team-details text-center">
+                                    <div class="socials mt-20">
+                                        <a href="@item.Facebook">
+                                            <span class="fab fa-facebook-f"></span>
+                                        </a>
+                                        <a href="@item.Twitter">
+                                            <span class="fab fa-twitter"></span>
+                                        </a>
+                                        <a href="@item.Linkedin">
+                                            <span class="fab fa-linkedin-in"></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <a href="#url" class="team-title">@item.FullName</a>
+                        <p>@item.Title</p>
                     </div>
-                    <a href="#url" class="team-title">Lawrence Petrie</a>
-                    <p>Selling Agent</p>
                 </div>
-            </div>
-            <!-- end team member -->
-            <div class="col-lg-4 col-6 team-wrap mt-lg-5 mt-4">
-                <div class="team-member text-center">
-                    <div class="team-img">
-                        <img src="~/RealHouzing-Starter/assets/images/team2.jpg" alt="" class="radius-image">
-                        <div class="overlay-team">
-                            <div class="team-details text-center">
-                                <div class="socials mt-20">
-                                    <a href="#url">
-                                        <span class="fab fa-facebook-f"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fab fa-twitter"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fab fa-linkedin-in"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#url" class="team-title">Jack Peters</a>
-                    <p>Selling Agent</p>
-                </div>
-            </div>
-            <!-- end team member -->
-            <div class="col-lg-4 col-6 team-wrap mt-lg-5 mt-4">
-                <div class="team-member text-center">
-                    <div class="team-img">
-                        <img src="~/RealHouzing-Starter/assets/images/team3.jpg" alt="" class="radius-image">
-                        <div class="overlay-team">
-                            <div class="team-details text-center">
-                                <div class="socials mt-20">
-                                    <a href="#url">
-                                        <span class="fab fa-facebook-f"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fab fa-twitter"></span>
-                                    </a>
-                                    <a href="#url">
-                                        <span class="fab fa-linkedin-in"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#url" class="team-title">Anna Phillips</a>
-                    <p>Selling Agent</p>
-
-                </div>
-            </div>
-            <!-- end team member -->
+            }
         </div>
 
     </div>

@@ -1,0 +1,23 @@
+﻿@using RealHouzing.Consume.Models.VideoViewModels;
+@model UpdateVideoViewModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1 class="container">Video Güncelleme Sayfası</h1>
+<br />
+<form method="post" class="container">
+    @Html.HiddenFor(x=>x.VideoID)
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Video Embed Linki</label>
+    <input type="text" asp-for="VideoURL" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <textarea type="text" asp-for="Description" class="form-control"></textarea>
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>

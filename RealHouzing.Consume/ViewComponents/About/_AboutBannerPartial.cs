@@ -2,7 +2,7 @@
 
 namespace RealHouzing.Consume.ViewComponents.About
 {
-    public class _AboutUsPartial : ViewComponent
+    public class _AboutBannerPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
