@@ -23,8 +23,8 @@ namespace RealHouzing.Consume.Controllers
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<TeamListViewModel>>(jsonData);
                 return View(values);
-
             }
+
             return View();
         }
 
@@ -36,6 +36,7 @@ namespace RealHouzing.Consume.Controllers
             {
                 return RedirectToAction("Index");
             }
+            
             return View();
         }
 
@@ -56,6 +57,7 @@ namespace RealHouzing.Consume.Controllers
             {
                 return RedirectToAction("Index");
             }
+            
             return View();
         }
 
@@ -70,6 +72,7 @@ namespace RealHouzing.Consume.Controllers
                 var values = JsonConvert.DeserializeObject<UpdateTeamViewModel>(jsonData);
                 return View(values);
             }
+            
             return View();
         }
 
@@ -84,6 +87,7 @@ namespace RealHouzing.Consume.Controllers
             {
                 return RedirectToAction("Index");
             }
+            
             return View();
         }
     }

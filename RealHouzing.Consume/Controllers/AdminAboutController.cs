@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using RealHouzing.Consume.Models.AboutViewModels;
 using System.Text;
 
-namespace RealHouzing.Consume.Controllers.Admin
+namespace RealHouzing.Consume.Controllers
 {
     public class AdminAboutController : Controller
     {

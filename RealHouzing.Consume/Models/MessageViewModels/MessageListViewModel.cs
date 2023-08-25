@@ -1,6 +1,6 @@
-﻿namespace RealHouzing.Consume.Models
+﻿namespace RealHouzing.Consume.Models.MessageViewModels
 {
-    public class ContactViewModel
+    public class MessageListViewModel
     {
         public int ContactID { get; set; }
         public string FullName { get; set; }

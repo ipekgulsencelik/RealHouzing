@@ -1,4 +1,4 @@
-﻿namespace RealHouzing.Consume.Models
+﻿namespace RealHouzing.Consume.Models.CategoryViewModels
 {
     public class AddCategoryViewModel
     {
