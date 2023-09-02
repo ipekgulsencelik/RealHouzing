@@ -20,6 +20,7 @@ namespace RealHouzing.DataAccessLayer.Concrete
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<ServiceItem> ServiceItems { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }

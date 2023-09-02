@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RealHouzing.Consume.Models.MapViewModels;
 
 namespace RealHouzing.Consume.ViewComponents.Contact
@@ -21,6 +22,8 @@ namespace RealHouzing.Consume.ViewComponents.Contact
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<MapListViewModel>>(jsonData);
+
+                ViewBag.location = values.Select(x => x.MapLocation).FirstOrDefault();
 
                 return View(values);
             }

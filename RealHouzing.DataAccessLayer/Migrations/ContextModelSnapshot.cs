@@ -344,6 +344,9 @@ namespace RealHouzing.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CategoryID");
 
                     b.ToTable("Categories");
@@ -553,6 +556,26 @@ namespace RealHouzing.DataAccessLayer.Migrations
                     b.HasKey("ServiceID");
 
                     b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("RealHouzing.EntityLayer.Concrete.ServiceItem", b =>
+                {
+                    b.Property<int>("ServiceItemID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServiceItemID"), 1L, 1);
+
+                    b.Property<string>("ServiceName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ServiceStatus")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ServiceItemID");
+
+                    b.ToTable("ServiceItems");
                 });
 
             modelBuilder.Entity("RealHouzing.EntityLayer.Concrete.Subscribe", b =>

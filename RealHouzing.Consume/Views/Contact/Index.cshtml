@@ -12,6 +12,9 @@ Author URL: http://w3layouts.com
 <html lang="en">
 
 <body>
+
+    @await Component.InvokeAsync("_ContactBannerPartial")
+
     <!-- contacts-5-grid -->
     <div class="w3l-contact-10 py-5" id="contact">
         <div class="form-41-mian pt-lg-4 pt-md-3 pb-lg-4">
@@ -23,10 +26,6 @@ Author URL: http://w3layouts.com
 
                 @await Component.InvokeAsync("_ContactInformationPartial")
 
-                @await Component.InvokeAsync("_ContactPartial")
-
-                @*@await Component.InvokeAsync("_MapPartial")*@
-
                 @await Html.PartialAsync("SendMessage")
                
             </div>
@@ -34,8 +33,8 @@ Author URL: http://w3layouts.com
     </div>
     <!-- //contacts-5-grid -->
 
+    @await Component.InvokeAsync("_MapPartial")
+
 </body>
 
 </html>
-
-

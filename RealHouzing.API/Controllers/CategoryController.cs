@@ -36,7 +36,8 @@ namespace RealHouzing.API.Controllers
         {
             Category category = new Category()
             {
-                CategoryName = resultCategoryDTO.CategoryName
+                CategoryName = resultCategoryDTO.CategoryName,
+                ImageURL = resultCategoryDTO.ImageURL
             };
             _categoryService.TInsert(category);
 
@@ -49,7 +50,8 @@ namespace RealHouzing.API.Controllers
             Category category = new Category()
             {
                 CategoryID = updateCategoryDTO.CategoryID,
-                CategoryName = updateCategoryDTO.CategoryName
+                CategoryName = updateCategoryDTO.CategoryName,
+                ImageURL = updateCategoryDTO.ImageURL
             };
             _categoryService.TUpdate(category);
             

@@ -1,0 +1,20 @@
+﻿﻿@using RealHouzing.Consume.Models.ServiceItemViewModels;
+@model AddServiceItemViewModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="container">Hizmet Ekleme Sayfası</h1>
+<br />
+<form method="post" class="container">
+    <label>Ad</label>
+    <input type="text" asp-for="ServiceName" class="form-control" />
+    <br />
+    <div class="custom-control custom-checkbox">
+        <input asp-for="ServiceStatus" type="checkbox" class="custom-control-input">
+        <label asp-for="ServiceStatus" class="custom-control-label"></label>
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>

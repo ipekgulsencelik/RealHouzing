@@ -62,8 +62,6 @@
                             <li>
                                 <a href="#metal"><i class="fas fa-angle-right"></i> Property Search</a>
                             </li>
-
-
                         </ul>
                     </div>
                     <div class="col-lg-2 sub-two-right">
@@ -81,31 +79,17 @@
                             <li>
                                 <a href="#metal"><i class="fas fa-angle-right"></i> Apartments for Sale</a>
                             </li>
-
-
                         </ul>
                     </div>
-                    <div class="col-lg-3 sub-one-left ps-lg-5">
-                        <h6>Stay Update!</h6>
-                        <p class="w3f-para mb-4">Subscribe to our newsletter to receive our weekly feed.</p>
-                        <div class="w3l-subscribe-content align-self mt-lg-0 mt-5">
-                            <form action="#" method="post" class="subscribe-wthree">
-                                <div class="flex-wrap subscribe-wthree-field">
-                                    <input class="form-control" type="email" placeholder="Email" name="email" required="">
-                                    <button class="btn btn-style btn-primary" type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-
-
-                    </div>
+                    
+                    @await Html.PartialAsync("~/Views/Default/Subscribe.cshtml")
                 </div>
             </div>
             <div class="below-section mt-5 pt-lg-3">
                 <div class="copyright-footer">
                     <div class="columns text-left">
                         <p>
-                            © 2021 RealHouzing.All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
+                            © @DateTime.Now.Year RealHouzing.All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
                                 W3Layouts
                             </a>
                         </p>

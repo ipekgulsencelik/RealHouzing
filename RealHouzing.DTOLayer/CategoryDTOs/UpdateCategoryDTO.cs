@@ -10,5 +10,6 @@ namespace RealHouzing.DTOLayer.CategoryDTOs
     {
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
+        public string? ImageURL { get; set; }
     }
 }

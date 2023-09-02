@@ -1,0 +1,21 @@
+﻿﻿@using RealHouzing.Consume.Models.ServiceItemViewModels;
+@model UpdateServiceItemViewModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="container">Hizmet Güncelleme Sayfası</h1>
+<br />
+<form method="post" class="container">
+    @Html.HiddenFor(x=>x.ServiceItemID)
+    <label>Ad</label>
+    <input type="text" asp-for="ServiceName" class="form-control" />
+    <br />
+    <div class="custom-control custom-checkbox">
+        <input asp-for="ServiceStatus" type="checkbox" class="custom-control-input">
+        <label asp-for="ServiceStatus" class="custom-control-label"></label>
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>

@@ -1,0 +1,15 @@
+﻿﻿@using RealHouzing.Consume.Models.SubscribeViewModels;
+@model AddSubscribeViewModel
+
+<div class="col-lg-3 sub-one-left ps-lg-5">
+    <h6>Stay Update!</h6>
+    <p class="w3f-para mb-4">Subscribe to our newsletter to receive our weekly feed.</p>
+    <div class="w3l-subscribe-content align-self mt-lg-0 mt-5">
+        <form action="/Default/Subscribe" method="post" class="subscribe-wthree">
+            <div class="flex-wrap subscribe-wthree-field">
+                <input class="form-control" type="email" placeholder="Email" asp-for="Mail" required="">
+                <button class="btn btn-style btn-primary" type="submit">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</div>

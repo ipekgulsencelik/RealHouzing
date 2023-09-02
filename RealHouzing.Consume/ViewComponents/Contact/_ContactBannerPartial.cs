@@ -2,7 +2,7 @@
 
 namespace RealHouzing.Consume.ViewComponents.Contact
 {
-    public class _ContactPartial : ViewComponent
+    public class _ContactBannerPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

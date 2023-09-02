@@ -5,8 +5,8 @@
     <div class="locations py-5">
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="heading text-center mx-auto">
-                <h6 class="title-subw3hny mb-1">Kategoriler</h6>
-                <h3 class="title-w3l mb-3">Mülk Kategorilerimizi Keşfedin</h3>
+                <h6 class="title-subw3hny mb-1">Our Properties</h6>
+                <h3 class="title-w3l mb-3">Explore Our Properties</h3>
             </div>
             <div class="row">
                 @foreach (var item in Model)
@@ -15,7 +15,7 @@
                         <div class="w3property-grid">
                             <a href="#property">
                                 <div class="box16">
-                                    @*<img class="img-fluid" src="@item." style="width:250px; height:200px" alt="">*@
+                                    <img class="img-fluid" src="@item.ImageURL" style="width:250px; height:200px" alt="">
                                     <div class="box-content text-center">
                                         <i class="fas fa-home"></i>
                                         <h3 class="title">@item.CategoryName</h3>

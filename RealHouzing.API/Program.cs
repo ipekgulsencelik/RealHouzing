@@ -46,8 +46,14 @@ namespace RealHouzing.API
             builder.Services.AddScoped<IBuyLeaseDAL, EFBuyLeaseDAL>();
             builder.Services.AddScoped<IBuyLeaseService, BuyLeaseManager>();
 
+            builder.Services.AddScoped<IPostPropertyDAL, EFPostPropertyDAL>();
+            builder.Services.AddScoped<IPostPropertyService, PostPropertyManager>();
+
             builder.Services.AddScoped<IServiceDAL, EFServiceDAL>();
             builder.Services.AddScoped<IServiceService, ServiceManager>();
+
+            builder.Services.AddScoped<IServiceItemDAL, EFServiceItemDAL>();
+            builder.Services.AddScoped<IServiceItemService, ServiceItemManager>();
 
             builder.Services.AddScoped<ISubscribeDAL, EFSubscribeDAL>();
             builder.Services.AddScoped<ISubscribeService, SubscribeManager>();

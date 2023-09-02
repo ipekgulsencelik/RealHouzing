@@ -1,0 +1,45 @@
+﻿﻿@using RealHouzing.Consume.Models.ServiceItemViewModels;﻿
+@model List<ServiceItemListViewModel>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<br />
+<br />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Service Item Name</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.ServiceName</td>
+                <td>
+                    <a href="/ServiceItem/UpdateServiceItem/@item.ServiceItemID" class="btn btn-success">
+                        <i class="fas fa-pencil-alt">
+                        </i> Güncelle
+                    </a>
+                </td>
+                <td>
+                    <a href="/ServiceItem/DeleteServiceItem/@item.ServiceItemID" class="btn btn-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i> Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/ServiceItem/AddServiceItem/" class="btn btn-primary">Add New Service Item</a>
+</div>
